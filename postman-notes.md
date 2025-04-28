@@ -27,6 +27,7 @@
 14. Responded output should be a "200 ok: Request successful. The server has responded as required."
 
 ## API Request detais:
+```
 **Method**: POST
 **Endpoint**:https://api.linqapp.com/api/v2/contacts
 **Header**:
@@ -34,7 +35,7 @@
 -Accept: application/json
 -x-linq-api-token: 8cb84c71-78f5-4e7a-9316-edd2193ca814
 **Payload**:
--json
+ json
 {
     "company": "linq",
     "email": "test10@gmail.com",
@@ -100,7 +101,7 @@
 ![alt text](Devtools_Payload.png) 
 ![alt text](Devtools_Response.png) 
 ![alt text](Postman_Savingcontact.png)
-
+```
 
 
 
@@ -117,6 +118,7 @@
 10. Responded output should be a "200 ok: Request successful. The server has responded as required." with the details same as in Response tab.
 
 ## API Request detais:
+```
 **Method**: GET
 **Endpoint**:https://api.linqapp.com/api/v2/contacts/2580327
 **Header**:
@@ -163,6 +165,7 @@
 ![alt text](Devtools_Response_PV.png) 
 ![alt text](Devtools_Header_PV.png) 
 ![alt text](Profileview_Postman.png)
+```
 
 
 ## Steps to inspect API Calls (Viewing Profile contacts)
@@ -178,6 +181,7 @@
 10. Responded output should be a "200 ok: Request successful. The server has responded as required." with the details same as in Response tab.
 
 ## API Request detais:
+```
 **Method**: POST
 **Endpoint**:https://api.linqapp.com/api/v3/user_contacts/search?page=1&results_per_page=24
 **Header**:
@@ -224,7 +228,7 @@
 ![alt text](DevTools_Payload_UC.png) 
 ![alt text](DevTools_Header_UC.png) 
 ![alt text](UserContacts_Postman.png)
-
+```
 
 
 ## Steps to inspect API Calls (Updating Saved contact)
@@ -241,6 +245,7 @@
 11. Responded output should be a "200 ok: Request successful. The server has responded as required." with the details same as in Response tab.
 
 ## API Request detais:
+```
 **Method**: PUT
 **Endpoint**:https://api.linqapp.com/api/v2/contacts/2612463?user_id=569681
 **Header**:
@@ -287,7 +292,7 @@
 ![alt text](Updatecontact_Postman.png) 
 ![alt text](DevTools_Response_PUT.png) 
 ![alt text](DevTools_Header_PUT.png)
-
+```
 
 
 
@@ -295,5 +300,5 @@
 
 1. **API Authentication uses API Token instead of Authorization Bearer Token.**
     In the tested APIs, authentication is handled by passing a custom header x-linq-api-token with the API token value. Typically, modern APIs use an Authorization: Bearer token  header for security and standardization purposes. Using x-linq-api-token instead of Authorization: Bearer is a non-standard approach.
-2.**Using POST Request to Fetch Contact List Instead of GET**
+2. **Using POST Request to Fetch Contact List Instead of GET**
     To retrieve all user contacts (https://api.linqapp.com/api/v3/user_contacts/search?page=1&results_per_page=24), the API uses a POST request instead of a GET request. Normally, retrieval operations should use the GET method according to RESTful API best practices. POST is generally used when creating not fetching.
